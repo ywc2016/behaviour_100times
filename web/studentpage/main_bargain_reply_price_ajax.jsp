@@ -154,14 +154,15 @@
 
                     BargainPointCalculate bargainPointCalculate = new BargainPointCalculate();
 
-                    bargainMatch.setSupplierProfits(bargainPointCalculate.calculateOneDisagreeSupplier(bargainData.getPrice(),
+                    bargainMatch.setSupplierProfits(bargainPointCalculate.calculateAverageDisagreeSupplier(bargainData.getPrice(),
                             bargainData.getQuantity(), bargainParameter.getK(), bargainParameter.getC(),
                             bargainParameter.getA(), bargainParameter.getB(), bargainParameter.getP(),
-                            bargainMatch.getSupplierDemand()));
+                            bargainExperiments.getRandomNeed()));
 
-                    bargainMatch.setRetailerProfits(bargainPointCalculate.calculateOneDisagreeRetailer(bargainData.getPrice(),
+                    bargainMatch.setRetailerProfits(bargainPointCalculate.calculateAverageDisagreeRetailer(bargainData.getPrice(),
                             bargainData.getQuantity(), bargainParameter.getK(), bargainParameter.getC(),
-                            bargainParameter.getA(), bargainParameter.getB(), bargainParameter.getP(), bargainMatch.getRetailerDemand()));
+                            bargainParameter.getA(), bargainParameter.getB(), bargainParameter.getP(),
+                            bargainExperiments.getRandomNeed()));
 
                     bargainMatch.setParticipantStatus("查看结果");
                     bargainMatch.setSecomdParticipantStatus("查看结果");
@@ -206,15 +207,15 @@
 
                     BargainPointCalculate bargainPointCalculate = new BargainPointCalculate();
 
-                    bargainMatch.setSupplierProfits(bargainPointCalculate.calculateOneDisagreeSupplier(bargainData.getPrice(),
+                    bargainMatch.setSupplierProfits(bargainPointCalculate.calculateAverageDisagreeSupplier(bargainData.getPrice(),
                             bargainData.getQuantity(), bargainParameter.getK(), bargainParameter.getC(),
                             bargainParameter.getA(), bargainParameter.getB(), bargainParameter.getP(),
-                            bargainMatch.getSupplierDemand()));
+                            bargainExperiments.getRandomNeed()));
 
-                    bargainMatch.setRetailerProfits(bargainPointCalculate.calculateOneDisagreeRetailer(bargainData.getPrice(),
+                    bargainMatch.setRetailerProfits(bargainPointCalculate.calculateAverageDisagreeRetailer(bargainData.getPrice(),
                             bargainData.getQuantity(), bargainParameter.getK(), bargainParameter.getC(),
                             bargainParameter.getA(), bargainParameter.getB(), bargainParameter.getP(),
-                            bargainMatch.getRetailerDemand()));
+                            bargainExperiments.getRandomNeed()));
 
                     bargainMatch.setParticipantStatus("查看结果");
                     bargainMatch.setSecomdParticipantStatus("查看结果");
@@ -322,14 +323,15 @@
 
 
         BargainPointCalculate bargainPointCalculate = new BargainPointCalculate();
-        bargainMatch.setSupplierProfits(bargainPointCalculate.calculateOneDisagreeSupplier(0.0,
-                0, bargainParameter.getK(), bargainParameter.getC(),
-                bargainParameter.getA(), bargainParameter.getB(), bargainParameter.getP(), bargainMatch.getSupplierDemand()));
-
-        bargainMatch.setRetailerProfits(bargainPointCalculate.calculateOneDisagreeRetailer(0.0,
+        bargainMatch.setSupplierProfits(bargainPointCalculate.calculateAverageDisagreeSupplier(0.0,
                 0, bargainParameter.getK(), bargainParameter.getC(),
                 bargainParameter.getA(), bargainParameter.getB(), bargainParameter.getP(),
-                bargainMatch.getRetailerDemand()));
+                bargainExperiments.getRandomNeed()));
+
+        bargainMatch.setRetailerProfits(bargainPointCalculate.calculateAverageDisagreeRetailer(0.0,
+                0, bargainParameter.getK(), bargainParameter.getC(),
+                bargainParameter.getA(), bargainParameter.getB(), bargainParameter.getP(),
+                bargainExperiments.getRandomNeed()));
 
         bargainMatch.setParticipantStatus("查看结果");
         bargainMatch.setSecomdParticipantStatus("查看结果");

@@ -114,19 +114,19 @@
                             continue;
                         }
                         double myProfit1 = identity.equals("first")
-                                ? bargainPointCalculate.calculateExpectedAgreeSupplier(bargainData2.getPrice(), bargainData2.getQuantity(), bargainParameter.getK(),
+                                ? bargainPointCalculate.calculateAverageAgreeSupplier(bargainData2.getPrice(), bargainData2.getQuantity(), bargainParameter.getK(),
                                 bargainParameter.getC(), bargainParameter.getA(), bargainParameter.getB(),
-                                bargainParameter.getP())
-                                : bargainPointCalculate.calculateExpectedAgreeRetailer(bargainData2.getPrice(), bargainData2.getQuantity(), bargainParameter.getK(),
+                                bargainParameter.getP(), bargainExperiments.getRandomNeed())
+                                : bargainPointCalculate.calculateAverageAgreeRetailer(bargainData2.getPrice(), bargainData2.getQuantity(), bargainParameter.getK(),
                                 bargainParameter.getC(), bargainParameter.getA(), bargainParameter.getB(),
-                                bargainParameter.getP());
+                                bargainParameter.getP(), bargainExperiments.getRandomNeed());
                         double oppositeProfit1 = identity.equals("first")
-                                ? bargainPointCalculate.calculateExpectedAgreeRetailer(bargainData2.getPrice(), bargainData2.getQuantity(), bargainParameter.getK(),
+                                ? bargainPointCalculate.calculateAverageAgreeRetailer(bargainData2.getPrice(), bargainData2.getQuantity(), bargainParameter.getK(),
                                 bargainParameter.getC(), bargainParameter.getA(), bargainParameter.getB(),
-                                bargainParameter.getP())
-                                : bargainPointCalculate.calculateExpectedAgreeSupplier(bargainData2.getPrice(), bargainData2.getQuantity(), bargainParameter.getK(),
+                                bargainParameter.getP(), bargainExperiments.getRandomNeed())
+                                : bargainPointCalculate.calculateAverageAgreeSupplier(bargainData2.getPrice(), bargainData2.getQuantity(), bargainParameter.getK(),
                                 bargainParameter.getC(), bargainParameter.getA(), bargainParameter.getB(),
-                                bargainParameter.getP());
+                                bargainParameter.getP(), bargainExperiments.getRandomNeed());
                 %>
                 <tr <%=bargainData2.getParticipantId().equals(bargainParticipant.getId()) ? "class='me'" : ""%>>
                     <td><%=i++%>

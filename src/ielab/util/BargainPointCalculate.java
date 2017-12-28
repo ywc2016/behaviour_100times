@@ -187,7 +187,7 @@ public class BargainPointCalculate {
 //                bargainExperiments.getRandomNeed());
 //        System.out.println(result2);
 
-        double d = bargainPointCalculate.calculateOneDisagreeSupplier(0.0, 0, 120, 10, 50, 100, 40, 96);
-        System.out.println(d);
+//        double d = bargainPointCalculate.calculateOneDisagreeSupplier(0.0, 0, 120, 10, 50, 100, 40, 96);
+//        System.out.println(d);
     }
 }
